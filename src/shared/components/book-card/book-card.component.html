@@ -1,0 +1,23 @@
+<mat-card>
+    <div class="content">
+        @if(book.img){
+            <div class="book-cover">
+                <img [src]="book.img" alt="Book cover" />
+            </div>
+        }
+        @else {
+            <div class="book-cover">{{labels.noImage}}</div>
+        }
+
+        @for(header of headers; track $index){
+            <mat-card-content>
+                <mat-card-subtitle>{{ header | titlecase }}</mat-card-subtitle>
+                <p>{{ getBookProperty(header) }}</p>
+              </mat-card-content>
+        }
+  
+      <button mat-button (click)="closeDelete()">{{labels.close}}</button>
+      <button mat-button (click)="closeDelete(true)">{{labels.delete}}</button>
+    </div>
+  </mat-card>
+  

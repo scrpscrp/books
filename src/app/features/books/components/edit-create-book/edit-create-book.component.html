@@ -1,0 +1,24 @@
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <h2>{{ title() }}</h2>
+            @for(header of headers; track $index){
+                <mat-form-field>
+                    <mat-label>{{header | titlecase }}</mat-label>
+                    <input [formControlName]='header' matInput>
+                    @if (form.controls.title.invalid) {
+                        <mat-error>
+                                {{errorMessageRequired}}
+                        </mat-error>
+                    }
+                </mat-form-field>
+            }    
+
+            <div class="uploader">
+                <mat-label style="margin-right: 1rem;">{{labels.uploadImage}}</mat-label>
+                <input type="file" (change)="onFileSelected($event)">
+            </div>
+
+            <div class="action-buttons">
+                <button mat-button type="button" (click)="close()">{{labels.cancel}}</button>
+                <button mat-button="submit">{{labels.submit}}</button>
+            </div>
+</form>

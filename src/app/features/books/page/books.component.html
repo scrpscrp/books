@@ -1,0 +1,8 @@
+<app-book-list 
+  *ngIf="books$ | async as books "
+  [books]="books"
+  (update)="update($event)"
+  (delete)="deleteBook($event)"
+  (add)="add()"
+  (details)="openDetails($event)"
+></app-book-list>

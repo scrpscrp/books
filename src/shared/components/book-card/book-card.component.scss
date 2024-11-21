@@ -1,0 +1,39 @@
+::ng-deep .mat-mdc-card-content {
+    width: 10rem;
+}
+
+mat-card {
+    width: 100%; 
+    max-width: 400px; 
+    display: flex;
+    flex-direction: column;
+    .content {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 10px;
+        justify-content: space-between;
+      }
+      
+      .book-cover {
+        width: 20rem; 
+        height: 20rem; 
+        background-color: #f0f0f0; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+            img {
+            width: 100%; 
+            height: 100%;
+            object-fit: contain; 
+            }
+            button {
+                margin: 1rem;
+            }
+      }
+
+  }
+  
+  
+    

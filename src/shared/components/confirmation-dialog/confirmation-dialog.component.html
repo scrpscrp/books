@@ -1,0 +1,14 @@
+<mat-card>
+    <mat-card-content>
+        <mat-card-title>
+            <h5>{{text}}</h5>
+        </mat-card-title>
+
+        <mat-divider></mat-divider>
+
+        <div class="action-buttons">
+          <button mat-button (click)="confirm()">{{labels.yes}}</button>
+          <button mat-button (click)="close()">{{labels.no}}</button>
+        </div>
+    </mat-card-content>
+</mat-card>
